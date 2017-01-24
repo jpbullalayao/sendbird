@@ -27,11 +27,14 @@ SendBird.configuration.api_key = "..."
 SendBird::User.create(user_id: 'User 1', nickname: 'First SendBird User', profile_url: nil)
 
 # Retrieve a user 
-user = SendBird::User.retrieve('User 1')
+user = SendBird::User.view('User 1')
 
 # Update a user 
 user.nickname = 'New Nickname'
 user.save
+
+# Delete a user 
+user.delete
 ```
 
 ## Development

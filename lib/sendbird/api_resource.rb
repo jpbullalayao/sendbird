@@ -7,7 +7,7 @@ module SendBird
       "#{self.class.base_url}/#{id}"
     end
 
-    def self.retrieve(id)
+    def self.view(id)
       resource = self.new(id)
       resource.refresh
       resource
