@@ -15,6 +15,8 @@ module SendBird
   require 'sendbird/sendbird_object'
   require 'sendbird/api_resource'
   require 'sendbird/channel'
+  require 'sendbird/group_channel'
+  require 'sendbird/open_channel'
   require 'sendbird/message'
   require 'sendbird/user'
 

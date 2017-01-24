@@ -3,7 +3,10 @@ module SendBird
 
     def self.object_classes
       @object_classes ||= {
-        'SendBird::User' => SendBird::User
+        'SendBird::User'         => SendBird::User,
+        'SendBird::Channel'      => SendBird::Channel,
+        'SendBird::OpenChannel'  => SendBird::OpenChannel,
+        'SendBird::GroupChannel' => SendBird::GroupChannel,
       }
     end
 

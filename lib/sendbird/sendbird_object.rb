@@ -8,7 +8,7 @@ module SendBird
       case self.class.name
         when 'SendBird::User'
           @permitted_params = [:nickname, :profile_url, :issue_access_token]
-        when 'SendBird::Channel'
+        when 'SendBird::OpenChannel', 'SendBird::GroupChannel'
           @permitted_params = [:name, :cover_url, :data, :is_distinct]
       end
 
@@ -66,6 +66,10 @@ module SendBird
 
       permitted_hash
     end
+
+    # def self.name
+    #   name.gsub(/([A-Za-z]*:{2})/, '')
+    # end
 
     protected
 
