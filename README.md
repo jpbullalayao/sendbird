@@ -1,8 +1,6 @@
 # SendBird
 
-Welcome to your new gem! In this directory, you'll find the files you need to be able to package up your Ruby library into a gem. Put your Ruby code in the file `lib/sendbird`. To experiment with that code, run `bin/console` for an interactive prompt.
-
-TODO: Delete this and the text above, and describe your gem
+Ruby wrapper for the SendBird Platform API, built by avid SendBird users!
 
 ## Installation
 
@@ -22,11 +20,18 @@ Or install it yourself as:
 
 ## Usage
 
-```
+```ruby
 SendBird.configuration.api_key = "..."
 
 # Create a user
 SendBird::User.create(user_id: 'User 1', nickname: 'First SendBird User', profile_url: nil)
+
+# Retrieve a user 
+user = SendBird::User.retrieve('User 1')
+
+# Update a user 
+user.nickname = 'New Nickname'
+user.save
 ```
 
 ## Development

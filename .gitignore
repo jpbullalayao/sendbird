@@ -10,5 +10,6 @@
 
 .DS_Store
 .idea
+.idea/*
 lib/.DS_Store
 lib/sendbird/.DS_Store
