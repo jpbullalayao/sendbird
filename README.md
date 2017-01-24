@@ -24,7 +24,7 @@ Or install it yourself as:
 SendBird.configuration.api_key = "..."
 
 # Create a user
-SendBird::User.create(user_id: 'User 1', nickname: 'First SendBird User', profile_url: nil)
+new_user = SendBird::User.create(user_id: 'User 1', nickname: 'First SendBird User', profile_url: nil)
 
 # Retrieve a user 
 user = SendBird::User.view('User 1')

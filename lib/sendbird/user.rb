@@ -59,5 +59,10 @@ module SendBird
     def update_channel_push_preference
     end
 
+    private
+
+      def self.convert_to_sendbird_object(response)
+        Util.convert_to_sendbird_object('SendBird::User', response['user_id'], response)
+      end
   end
 end

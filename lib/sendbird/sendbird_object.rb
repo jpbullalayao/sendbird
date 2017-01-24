@@ -29,6 +29,10 @@ module SendBird
       "#<#{self.class}:0x#{self.object_id.to_s(16)}#{id_string}> JSON: " + JSON.pretty_generate(@values)
     end
 
+    def self.initialize_from(id, values)
+      self.new(id).initialize_from(values)
+    end
+
     def initialize_from(values)
       update_attributes(values)
       self

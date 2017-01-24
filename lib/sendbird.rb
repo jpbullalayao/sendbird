@@ -21,6 +21,7 @@ module SendBird
   # Other
   require 'sendbird/client'
   require 'sendbird/configuration'
+  require 'sendbird/util'
   require 'sendbird/version'
 
 end
