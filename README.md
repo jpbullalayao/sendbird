@@ -35,6 +35,9 @@ user.save
 
 # Delete a user 
 user.delete
+
+# See list of users 
+SendBird::User.list
 ```
 
 ## Development

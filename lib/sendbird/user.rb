@@ -1,12 +1,17 @@
 module SendBird
   class User < APIResource
     extend SendBird::APIOperations::Create
-    extend SendBird::APIOperations::List
+    # extend SendBird::APIOperations::List
     include SendBird::APIOperations::Save
     include SendBird::APIOperations::Delete
 
     def self.base_url(params = {})
       "#{SendBird.configuration.site}/users"
+    end
+
+    def self.list(params = {})
+      response = JSON.parse(RestClient.get(base_url, { content_type: :json, 'Api-Token': SendBird.configuration.api_key }).body)
+      convert_to_sendbird_object(response['users'])
     end
 
     def open_channels
@@ -61,8 +66,8 @@ module SendBird
 
     private
 
-      def self.convert_to_sendbird_object(response)
-        Util.convert_to_sendbird_object('SendBird::User', response['user_id'], response)
+      def self.convert_to_sendbird_object(response, user_id = nil)
+        Util.convert_to_sendbird_object('SendBird::User', response, user_id)
       end
   end
 end

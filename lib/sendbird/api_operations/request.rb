@@ -9,10 +9,6 @@ module SendBird
         headers  = { content_type: :json, 'Api-Token': SendBird.configuration.api_key }
         response = nil
 
-        puts http_method
-        puts resource_url
-        puts params.to_json
-
         case http_method
           when :get
             response = JSON.parse(RestClient.get(resource_url, headers).body)
