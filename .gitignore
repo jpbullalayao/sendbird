@@ -7,3 +7,8 @@
 /pkg/
 /spec/reports/
 /tmp/
+
+.DS_Store
+.idea
+lib/.DS_Store
+lib/sendbird/.DS_Store

@@ -5,7 +5,7 @@ require 'sendbird/version'
 
 Gem::Specification.new do |spec|
   spec.name          = "sendbird"
-  spec.version       = Sendbird::VERSION
+  spec.version       = SendBird::VERSION
   spec.authors       = ["Jourdan Bul-lalayao"]
   spec.email         = ["jpbullalayao@gmail.com"]
 

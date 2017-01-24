@@ -1,3 +1,3 @@
-module Sendbird
+module SendBird
   VERSION = "0.1.0"
 end
