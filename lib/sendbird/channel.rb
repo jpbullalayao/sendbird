@@ -14,8 +14,8 @@ module SendBird
 
     private
       def self.convert_to_sendbird_object(response, params = {})
-        class_name = params[:channel_type] == 'open' ? 'SendBird::OpenChannel' : 'SendBird::GroupChannel'
-        Util.convert_to_sendbird_object(class_name, response, response['channel_url'])
+        object_name = params[:channel_type] == 'open' ? 'OpenChannel' : 'GroupChannel'
+        Util.convert_to_sendbird_object(object_name, response, response['channel_url'])
       end
   end
 end

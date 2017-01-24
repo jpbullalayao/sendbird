@@ -67,7 +67,7 @@ module SendBird
     private
 
       def self.convert_to_sendbird_object(response, params = {})
-        Util.convert_to_sendbird_object('SendBird::User', response, response['user_id'])
+        Util.convert_to_sendbird_object(object_name, response, response['user_id'])
       end
   end
 end

@@ -5,10 +5,10 @@ module SendBird
     def initialize(id = nil)
       @unsaved_values = Set.new
 
-      case self.class.name
-        when 'SendBird::User'
+      case self.class.object_name
+        when 'User'
           @permitted_params = [:nickname, :profile_url, :issue_access_token]
-        when 'SendBird::OpenChannel', 'SendBird::GroupChannel'
+        when 'OpenChannel', 'GroupChannel'
           @permitted_params = [:name, :cover_url, :data, :is_distinct]
       end
 
@@ -67,9 +67,9 @@ module SendBird
       permitted_hash
     end
 
-    # def self.name
-    #   name.gsub(/([A-Za-z]*:{2})/, '')
-    # end
+    def self.object_name
+      self.name.gsub(/([A-Za-z]*:{2})/, '')
+    end
 
     protected
 
